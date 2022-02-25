@@ -1,5 +1,4 @@
 #include <gfx/window.h>
-#include <world/mesh.h>
 
 int init()
 {
@@ -33,17 +32,19 @@ int createWindow(int width, int height, const char* title)
 		return -1;
 	}
 
+	start();
+
 	return 0;
 }
 
-void loop(void(*func)(Mesh), Mesh block)
+void loop()
 {
 	while (!glfwWindowShouldClose(window))
 	{
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		glClearColor(135.0f / 255.0f, 206.0f / 255.0f, 235.0f / 255.0f, 1.0f);
 
-		func(block);
+		update();
 
 		glfwSwapBuffers(window);
 		glfwPollEvents();
@@ -52,10 +53,10 @@ void loop(void(*func)(Mesh), Mesh block)
 	glfwTerminate();
 }
 
-int startWindow(int width, int height, const char* title, void(*func)(Mesh), Mesh block)
+int startWindow(int width, int height, const char* title)
 {
 	int success = init() | createWindow(width, height, title);
-	loop(func, block);
+	loop();
 
 	return success;
 }
