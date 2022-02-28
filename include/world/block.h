@@ -1,7 +1,7 @@
 #pragma once
 
 #include <main.h>
-#include <world/blockface.h>
+#include <world/mesh.h>
 #include <gfx/shader.h>
 #include <world/camera.h>
 
@@ -18,14 +18,14 @@ private:
 		-0.5f, -0.5f, -0.5f,	0.0f, 1.0f, 0.0f, 1.0f		//Bottom Left
 	};
 
-	unsigned int frontFaceTris[6] =
+	int frontFaceTris[6] =
 	{
 		2, 1, 0,
 		2, 0, 3
 	};
 
 	Shader shader;
-	BlockFace frontFace;
+	Mesh frontFace;
 
 	glm::mat4 transform = glm::mat4(1.0f);
 

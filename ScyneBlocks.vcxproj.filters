@@ -24,7 +24,7 @@
     <ClCompile Include="..\..\C-C++ libs\glad\src\glad.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\world\blockface.cpp">
+    <ClCompile Include="src\world\mesh.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\world\block.cpp">
@@ -36,6 +36,9 @@
     <ClCompile Include="src\world\camera.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\util\buffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\main.h">
@@ -44,7 +47,7 @@
     <ClInclude Include="include\gfx\window.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\world\blockface.h">
+    <ClInclude Include="include\world\mesh.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\world\block.h">
@@ -54,6 +57,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\world\camera.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\util\buffer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

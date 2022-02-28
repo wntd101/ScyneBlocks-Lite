@@ -46,6 +46,7 @@ void loop()
 
 		update();
 
+		glfwSwapInterval(1);
 		glfwSwapBuffers(window);
 		glfwPollEvents();
 	}

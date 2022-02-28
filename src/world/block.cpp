@@ -4,8 +4,7 @@
 void Block::init()
 {
 	shader.init("default");
-	frontFace.init(frontFaceVerts, frontFaceTris);
-	transform = glm::rotate(transform, glm::radians(40.0f), glm::vec3(0.0, 1.0, 0.0));
+	frontFace.init(frontFaceVerts, frontFaceTris, 28, 6);
 }
 
 void Block::update(Camera cam)

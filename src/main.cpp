@@ -3,21 +3,19 @@
 #include <world/block.h>
 #include <world/camera.h>
 
-namespace ScyneBlocks
-{
-	Block block;
-	Camera cam;
-}
+
+Block block;
+Camera cam;
 
 void start()
 {
-	ScyneBlocks::cam.init(100.0f, (float)1920.0f / (float)1080.0f);
-	ScyneBlocks::block.init();
+	cam.init(100.0f, (float)1920.0f / (float)1080.0f);
+	block.init();
 }
 
 void update()
 {
-	ScyneBlocks::block.update(ScyneBlocks::cam);
+	block.update(cam);
 }
 
 int main()
