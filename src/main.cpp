@@ -2,7 +2,7 @@
 #include <gfx/window.h>
 #include <world/block.h>
 #include <world/camera.h>
-
+#include <util/input.h>
 
 Block block;
 Camera cam;
@@ -16,6 +16,8 @@ void start()
 void update()
 {
 	block.update(cam);
+
+	if (isKeyDown(GLFW_KEY_SPACE)) std::cout << "Space!" << std::endl;
 }
 
 int main()

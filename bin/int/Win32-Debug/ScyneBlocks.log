@@ -1,5 +1,4 @@
-﻿  main.cpp
-  block.cpp
-  mesh.cpp
+﻿  window.cpp
+  input.cpp
   Generating Code...
   ScyneBlocks.vcxproj -> D:\SourceCode\C-C++\ScyneBlocks\bin\build\Win32-Debug\ScyneBlocks.exe

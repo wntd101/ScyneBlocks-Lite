@@ -1,4 +1,5 @@
 #include <gfx/window.h>
+#include <util/input.h>
 
 int init()
 {
@@ -25,12 +26,15 @@ int createWindow(int width, int height, const char* title)
 		return -1;
 	}
 	glfwMakeContextCurrent(window);
+	glfwSwapInterval(1);
 
 	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
 	{
 		std::cout << "Failed to initialize GLAD" << std::endl;
 		return -1;
 	}
+
+	glfwSetKeyCallback(window, keyCallback);
 
 	start();
 
@@ -46,7 +50,6 @@ void loop()
 
 		update();
 
-		glfwSwapInterval(1);
 		glfwSwapBuffers(window);
 		glfwPollEvents();
 	}

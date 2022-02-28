@@ -164,6 +164,7 @@
     <ClCompile Include="src\gfx\window.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\util\buffer.cpp" />
+    <ClCompile Include="src\util\input.cpp" />
     <ClCompile Include="src\world\block.cpp" />
     <ClCompile Include="src\world\mesh.cpp" />
     <ClCompile Include="src\world\camera.cpp" />
@@ -173,6 +174,7 @@
     <ClInclude Include="include\gfx\window.h" />
     <ClInclude Include="include\main.h" />
     <ClInclude Include="include\util\buffer.h" />
+    <ClInclude Include="include\util\input.h" />
     <ClInclude Include="include\world\block.h" />
     <ClInclude Include="include\world\mesh.h" />
     <ClInclude Include="include\world\camera.h" />
