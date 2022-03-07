@@ -1,23 +1,24 @@
 #include <main.h>
 #include <gfx/window.h>
-#include <world/block.h>
-#include <world/camera.h>
+#include <world/chunk.h>
 #include <util/input.h>
+#include <world/player.h>
 
-Block block;
-Camera cam;
+Chunk chunk;
+Player player;
+
 
 void start()
 {
-	cam.init(100.0f, (float)1920.0f / (float)1080.0f);
-	block.init();
+	player = Player(glm::vec3(0.0, 0.0, 0.0));
+	chunk.init();
 }
 
 void update()
 {
-	block.update(cam);
-
-	if (isKeyDown(GLFW_KEY_SPACE)) std::cout << "Space!" << std::endl;
+	chunk.update(player);
+	player.update();
+	endInputs();
 }
 
 int main()

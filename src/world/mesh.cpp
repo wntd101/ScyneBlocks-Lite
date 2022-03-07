@@ -11,6 +11,8 @@ void Mesh::init(float verts[], int tris[], int vertCount, int triCount)
 		indices.push_back(tris[i]);
 	}
 
+	this->triCount = triCount;
+
 	//==== Generate VAO, VBO, EBO ====//
 
 	glGenVertexArrays(1, &vao);
@@ -37,7 +39,7 @@ void Mesh::render()
 	glEnableVertexAttribArray(0);
 	glEnableVertexAttribArray(1);
 
-	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+	glDrawElements(GL_TRIANGLES, triCount, GL_UNSIGNED_INT, 0);
 }
 
 void Mesh::remove()

@@ -165,9 +165,10 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\util\buffer.cpp" />
     <ClCompile Include="src\util\input.cpp" />
-    <ClCompile Include="src\world\block.cpp" />
+    <ClCompile Include="src\world\chunk.cpp" />
     <ClCompile Include="src\world\mesh.cpp" />
     <ClCompile Include="src\world\camera.cpp" />
+    <ClCompile Include="src\world\player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\gfx\shader.h" />
@@ -175,9 +176,11 @@
     <ClInclude Include="include\main.h" />
     <ClInclude Include="include\util\buffer.h" />
     <ClInclude Include="include\util\input.h" />
-    <ClInclude Include="include\world\block.h" />
+    <ClInclude Include="include\world\chunk.h" />
+    <ClInclude Include="include\world\voxeldata.h" />
     <ClInclude Include="include\world\mesh.h" />
     <ClInclude Include="include\world\camera.h" />
+    <ClInclude Include="include\world\player.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="res\shaders\default.glsl" />

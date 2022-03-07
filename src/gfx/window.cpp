@@ -21,7 +21,7 @@ int createWindow(int width, int height, const char* title)
 
 	if (window == NULL)
 	{
-		std::cout << "Failed to Create The Window\n" << std::endl;
+		std::cout << "Failed to Create The Window" << std::endl;
 		glfwTerminate();
 		return -1;
 	}
@@ -34,7 +34,15 @@ int createWindow(int width, int height, const char* title)
 		return -1;
 	}
 
+	glEnable(GL_CULL_FACE);
+	glEnable(GL_DEPTH_TEST);
+	glCullFace(GL_BACK);
+	glFrontFace(GL_CW);
+
 	glfwSetKeyCallback(window, keyCallback);
+	glfwSetCursorPosCallback(window, mousePosCallback);
+
+	glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
 	start();
 

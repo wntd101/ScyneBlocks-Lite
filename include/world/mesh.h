@@ -15,6 +15,8 @@ private:
 	std::vector<float> vertices;
 	std::vector<int> indices;
 
+	int triCount;
+
 public:
 
 	void init(float verts[], int tris[], int vertCount, int triCount);

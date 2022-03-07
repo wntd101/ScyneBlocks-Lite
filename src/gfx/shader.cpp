@@ -96,7 +96,7 @@ void Shader::uploadFloat(const char* varName, float value)
 	glUniform1f(loc, value);
 }
 
-void Shader::uploadMat4(const char* varName, glm::mat4& value)
+void Shader::uploadMat4(const char* varName, glm::mat4 value)
 {
 	int loc = glGetUniformLocation(program, varName);
 	use();

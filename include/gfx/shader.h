@@ -34,5 +34,5 @@ public:
 	void detach();
 
 	void uploadFloat(const char* varName, float value);
-	void uploadMat4(const char* varName, glm::mat4& value);
+	void uploadMat4(const char* varName, glm::mat4 value);
 };
